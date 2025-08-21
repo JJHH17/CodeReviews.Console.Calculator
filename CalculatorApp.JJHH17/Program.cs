@@ -10,6 +10,8 @@ class Program
         // Display title as the C# console calculator app.
         Console.WriteLine("Console Calculator in C#\r");
         Console.WriteLine("------------------------\n");
+        // Creating a calculator object
+        Calculator calc = new Calculator();
 
         while (!endApp)
         {
@@ -52,15 +54,15 @@ class Program
             string? op = Console.ReadLine();
 
             // Validate input is not null, and matches the pattern
-            if (op == null || ! Regex.IsMatch(op, "[a|s|m|d]"))
+            if (op == null || !Regex.IsMatch(op, "[a|s|m|d]"))
             {
                 Console.WriteLine("Error: Unrecognized input.");
             }
             else
-            { 
+            {
                 try
                 {
-                    result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                    result = calc.DoOperation(cleanNum1, cleanNum2, op);
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine("This operation will result in a mathematical error.\n");
