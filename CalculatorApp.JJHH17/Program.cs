@@ -49,6 +49,7 @@ class Program
             Console.WriteLine("\ts - Subtract");
             Console.WriteLine("\tm - Multiply");
             Console.WriteLine("\td - Divide");
+            Console.WriteLine("\tu - Usage"); // Prints the usage of calculator to end user
             Console.Write("Your option? ");
 
             string? op = Console.ReadLine();
