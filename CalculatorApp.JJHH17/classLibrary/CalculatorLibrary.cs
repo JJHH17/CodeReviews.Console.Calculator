@@ -1,4 +1,5 @@
 ﻿namespace classLibrary;
+using System.Diagnostics; // Used for logging
 
 class Calculator
 {
